@@ -1,0 +1,7 @@
+src/.vs/*
+src/*/packages/*
+src/*/App_Data/*
+src/*/obj/*
+src/*/bin/*
+*.suo
+*/.vs/*

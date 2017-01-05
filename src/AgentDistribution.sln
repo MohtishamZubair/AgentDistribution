@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentDistribution.Repository", "AgentDistribution.Repository\AgentDistribution.Repository.csproj", "{44E9EF8F-6ECF-4458-8F52-ACC89485479F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentDistribution.API", "AgentDistribution.API\AgentDistribution.API.csproj", "{92A14E28-2403-4926-978A-E177844CCFC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44E9EF8F-6ECF-4458-8F52-ACC89485479F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E9EF8F-6ECF-4458-8F52-ACC89485479F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E9EF8F-6ECF-4458-8F52-ACC89485479F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E9EF8F-6ECF-4458-8F52-ACC89485479F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A14E28-2403-4926-978A-E177844CCFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A14E28-2403-4926-978A-E177844CCFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A14E28-2403-4926-978A-E177844CCFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A14E28-2403-4926-978A-E177844CCFC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
