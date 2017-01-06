@@ -20,16 +20,10 @@ namespace AgentDistribution.Controllers
     public class DeliveryController : ApiController
     {
         AuthContext db = new AuthContext();
-
-        //public IQueryable<Delivery> GetDeliveries()
-        //{
-        //    return db.Deliveries;
-        //}
-        //   http://localhost:63547/api/Delivery/ManageDeliveries
-
-        [Route("ManageDeliveries")]
+      
+        [Route("Delivery")]
         [Authorize]
-        public IHttpActionResult GetManageDeliveries()
+        public IHttpActionResult GetDeliveries()
         {
             return Ok(new
             {
@@ -38,7 +32,8 @@ namespace AgentDistribution.Controllers
             });
         }
 
-        public IHttpActionResult GetDeliveries()
+        [Route("DummyDelivery")]
+        public IHttpActionResult GetDummyDelivery()
         {
             return Ok(new { data = Enumerable.Range(1, 5).Select(i => new DeliveryView { DeliveryId = i, AgentId = i.ToString(), InvoiceId = i, IsDelivered = false, Notes = string.Format("notes for {0}", i) }).ToList() });
         }
