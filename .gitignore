@@ -4,11 +4,11 @@ AgentDistribution*API/Areas*
 **/app*/*.js*
 **/app/*/*.js*
 **/app/*/*/*.js*
-src/packages/*
+**/packages/*
 **/node_modules/*
 *.suo
 */.vs/*
-*.zip
+src/*.zip
 *.user
 
 # Windows image file caches
