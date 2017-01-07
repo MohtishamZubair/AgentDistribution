@@ -13,5 +13,11 @@ namespace AgentDistribution.FrontEnd.Controllers
         {
             return View();
         }
+
+        // GET: Home
+        public ActionResult TypescriptSet()
+        {
+            return View();
+        }
     }
 }
