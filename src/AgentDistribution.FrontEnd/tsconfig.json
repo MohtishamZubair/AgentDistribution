@@ -1,27 +1,13 @@
-//{
-//  "compilerOptions": {
-//    "noImplicitAny": false,
-//    "noEmitOnError": true,
-//    "removeComments": false,
-//    "sourceMap": true,
-//    "target": "es5"
-//  },
-//  "exclude": [
-//    "node_modules",
-//    "wwwroot"
-//  ]
-//}
 {
   "compilerOptions": {
-    "noImplicitAny": true,
-    "noEmitOnError": true,
-    "sourceMap": true,
     "target": "es5",
-    "outDir": "./Scripts/App"
-  },
-  "files": [
-    "./TS/test.ts"
-  ],
-  "compileOnSave": true
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es2015", "dom" ],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  }
 }
-

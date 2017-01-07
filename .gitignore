@@ -1,9 +1,9 @@
 **/bin/*
 **/obj/*
 AgentDistribution*API/Areas*
-AgentDistribution.FrontEnd/app*/*.js*
-AgentDistribution.FrontEnd/app/*/*.js*
-AgentDistribution.FrontEnd/app/*/*/*.js*
+**/app*/*.js*
+**/app/*/*.js*
+**/app/*/*/*.js*
 src/packages/*
 **/node_modules/*
 *.suo
