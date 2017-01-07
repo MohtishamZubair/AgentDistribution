@@ -1,5 +1,3 @@
-#AgentDistribution*/obj/*
-#AgentDistribution*/bin/*
 **/bin/*
 **/obj/*
 AgentDistribution*API/Areas*
@@ -7,10 +5,10 @@ AgentDistribution.FrontEnd/app*/*.js*
 AgentDistribution.FrontEnd/app/*/*.js*
 AgentDistribution.FrontEnd/app/*/*/*.js*
 src/packages/*
-AgentDistribution.FrontEnd/node_modules/*
+**/node_modules/*
 *.suo
 */.vs/*
-
+*.zip
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
