@@ -9,6 +9,8 @@ src/packages/*
 *.suo
 */.vs/*
 *.zip
+*.user
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -58,3 +60,4 @@ Temporary Items
 .apdisk
 
 
+*.user
