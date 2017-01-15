@@ -21,3 +21,11 @@ https://github.com/MohtishamZubair/AgentDistribution/releases/tag/angular2-types
 
 And delete other two projects except AgentDistribution.FrontEnd (contains angular2 + typescript with Bootstrap3.0)
  
+# Angular2 + Typescript2 + Bootstrap3
+
+Please download this release
+
+https://github.com/MohtishamZubair/AgentDistribution/releases/tag/bootstrap3
+
+
+And delete other two projects except AgentDistribution.FrontEnd. Then build and run project as normal web application
