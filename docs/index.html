@@ -1,79 +1,73 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>AgentDistribution by MohtishamZubair</title>
-    <link rel="stylesheet" href="/AgentDistribution/assets/css/style.css?v=671cff7a66997213b7c9ce56cd35f27321b33548">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="/AgentDistribution/assets/js/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-setting-up-angularjs2-in-vs2015-in-mvc5" class="anchor" href="#setting-up-angularjs2-in-vs2015-in-mvc5" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up AngularJS2 in VS2015 in MVC5</h1>
 
-  </head>
-  <body>
+<p>Currently lots of articles are available on net. But none able to enable single setup to work on Angular2 + typescript in VS2015 community (Update 3). You've to run npm install &amp; also npm start commands on command line to run the project and enable auto compile, as these commands do start Node.JS server (which is not required in VS2015) and also auto compiling option for typescript changes. This is very frustrating setup develop angular2 application with opening command prompt. And more distraction when your mvc5 based application is also not compile-able or build-able. </p>
 
-      <header>
-        <h1>AgentDistribution</h1>
-        <p>Delivery system for agent to delivered the assigned parcels or deliveries, will use MVC Web API for back end and for front end angularJS 2</p>
-      </header>
+<p>In following walk through you will be able successfully work on Angular2 (using systemjs) without need to run above mention commands just run application in debugging mode (F5) or (Ctrl + F5) and your changes of Typescript files will be there in browser refresh (or you can enable BrowserLink in VS) and also MVC application build will be successful. Let's start it by following steps</p>
 
-      <div id="banner">
-        <span id="logo"></span>
+<ul>
+<li>Install Typescript</li>
+<li>Install Node.Js &amp; Npm</li>
+<li>Setup for Angular 2</li>
+</ul>
 
-        <a href="https://github.com/MohtishamZubair/AgentDistribution" class="button fork"><strong>View On GitHub</strong></a>
-        
-      </div><!-- end banner -->
+<p>Feel free to bypass above two steps if you already have installed typescript and npm on your system.</p>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h1 id="agentdistribution">AgentDistribution</h1>
-<p>Delivery system for agent to delivered the assigned parcels or deliveries, will contains 
- - MVC Web API for back end 
- - for front end Admin angularJS 2 + Typescript 2 (latest)</p>
+<h2><a id="user-content-install-typescript" class="anchor" href="#install-typescript" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install Typescript</h2>
 
-<p>When you clone and build it will give this error if using VS2015 community</p>
+<p>You need to first of all install Typescript, Node.js + npm (node package manager)</p>
 
-<p>Error		This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props.	AgentDistribution.API	..\AgentDistribution\src\AgentDistribution.API\AgentDistribution.API.csproj</p>
+<p>For Type Script you can install it from VS2015(Update 3)</p>
 
-<p>Follow the home page of wiki of to resolve nuget package issue for WEB API project (home)[https://github.com/MohtishamZubair/AgentDistribution/wiki]</p>
+<p>Tools &gt; Extensions ... </p>
 
-<p>To Setup only Angular2 in VS2015 wiki is 
-https://github.com/MohtishamZubair/AgentDistribution/wiki/Setting-up-AngularJS2-in-VS2015-in-MVC5</p>
+<p><a href="https://github.com/MohtishamZubair/AgentDistribution/blob/master/src/wiki/SetNugetPackage.png" target="_blank"><img src="https://github.com/MohtishamZubair/AgentDistribution/raw/master/src/wiki/SetNugetPackage.png" alt="select extension from tools" style="max-width:100%;"></a></p>
 
-<h1 id="angular2-setup-only">Angular2 Setup only</h1>
+<p>then on open dialog select <strong>online</strong> option like <a href="https://github.com/MohtishamZubair/AgentDistribution/blob/master/src/wiki/ExtensionsPackages2Online.png" target="_blank"><img src="https://github.com/MohtishamZubair/AgentDistribution/raw/master/src/wiki/ExtensionsPackages2Online.png" alt="select on line " style="max-width:100%;"></a></p>
 
-<p>just download from this release</p>
+<p>then type search box for typescript and in results latest typescript on this date 8 jan'17 it was TS version 2.0.6</p>
 
-<p>https://github.com/MohtishamZubair/AgentDistribution/releases/tag/angular2-typescript2–starter</p>
+<p><a href="https://github.com/MohtishamZubair/AgentDistribution/blob/master/src/wiki/ExtensionsPackages3Online.png" target="_blank"><img src="https://github.com/MohtishamZubair/AgentDistribution/raw/master/src/wiki/ExtensionsPackages3Online.png" alt="select on lastest TS " style="max-width:100%;"></a>
+Then select download and follow screen to install as screen guide you</p>
 
-<p>And delete other two projects except AgentDistribution.FrontEnd (contains angular2 + typescript with Bootstrap3.0)</p>
+<p><a href="https://github.com/MohtishamZubair/AgentDistribution/blob/master/src/wiki/ExtensionsPackages4Online.png" target="_blank"><img src="https://github.com/MohtishamZubair/AgentDistribution/raw/master/src/wiki/ExtensionsPackages4Online.png" alt="select on download TS " style="max-width:100%;"></a></p>
 
-<h1 id="angular2--typescript2--bootstrap3">Angular2 + Typescript2 + Bootstrap3</h1>
+<p>After successful installation restart the Visual Studio. Now on Typescript will be enable in all projects. If you don't want to install it via VS2015 then you can go to <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48593">Typescript site</a> and install it from installer as well.</p>
 
-<p>Please download this release</p>
+<h2><a id="user-content-installing-nodejs--npm" class="anchor" href="#installing-nodejs--npm" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installing Node.js + npm</h2>
 
-<p>https://github.com/MohtishamZubair/AgentDistribution/releases/tag/bootstrap3</p>
+<p>After that install Node.js + npm from <a href="https://nodejs.org/en/download/">their site</a>, in fact no need of node.js server as visual studio has its own debugging express server, however VS2015 needs npm to resolve dependencies mention in package.json file. Make sure you should be able to run node and npm commands from anywhere in  your system via command line i.e. node and npm exe should be added to your path variables. Plz follow instructions from their site carefully. </p>
 
-<p>And delete other two projects except AgentDistribution.FrontEnd. Then build and run project as normal web application</p>
+<p>Now you are all most ready for angular 2 setup in VS.</p>
 
+<h2><a id="user-content-setup-for-angular-2" class="anchor" href="#setup-for-angular-2" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup for Angular 2</h2>
 
-      </section>
-      <footer>
-        
-          <p>Project maintained by <a href="https://github.com/MohtishamZubair">MohtishamZubair</a></p>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+<p>Add a Web project of MVC application without using any authentication. And run the application in browser. As you see the default page then performs following steps to setup AngularJS 2 + Typescript in your project.</p>
 
-    
+<p>Simply copy zip from <a href="https://github.com/MohtishamZubair/AgentDistribution/blob/master/AngularVS2015Setup/vs2015Angularjs2setup8jan0136PST.zip">angular setup zip</a>. This zip is prepared for VS2015 Community (update 3) for making changes in package.json &amp; tsconfig.json from <a href="https://github.com/angular/quickstart">angularjs2 github repository</a></p>
 
-  </body>
-</html>
+<p>And unzip it on root of your project. Then include these folders and files in your project by right click on project name and select "include in project" option.</p>
+
+<ol>
+<li>package.json ( contains dependencies and required angular2 modules along with their version, extracted from Angular2 repository)</li>
+<li>systemjs.config.js</li>
+<li>app [folder] containing two ts files</li>
+</ol>
+
+<p>Mean while two files under Views folder also changes i.e. _layouts.cshtml and index.cshtml</p>
+
+<p>No need to include any other files or folders like "node_modules", it should be generated automatically. Now press F5 to run application in debugging mode.</p>
+
+<p>That's it. Now refresh the browser you should see this message</p>
+
+<h3><a id="user-content-angular2-has-been-set" class="anchor" href="#angular2-has-been-set" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>angular2 has been set!</h3>
+
+<p>As angular2 has been setup now no need to build the project or run separate npm start or install command from command prompt</p>
+
+<h2><a id="user-content-note" class="anchor" href="#note" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Note</h2>
+
+<ul>
+<li>Try to run all installation using administrator privileges and also the VS2015.</li>
+<li>Node_modules folder should be generated automatically based on package.json file on root.</li>
+</ul>
+</article>
+  
